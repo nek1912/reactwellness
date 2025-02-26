@@ -1,0 +1,195 @@
+/* ===================== 🌟 Global Styles 🌟 ===================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* 🌞 Light Mode Background - Modern Gradient */
+:root {
+    --bg-gradient-light: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    --text-light: #222;
+    --input-bg-light: rgba(255, 255, 255, 0.9);
+}
+
+/* 🌙 Dark Mode Background - Futuristic Gradient */
+.dark-mode {
+    --bg-gradient-dark: linear-gradient(135deg, #1e1e2f, #252a34);
+    --text-dark: #fff;
+    --input-bg-dark: rgba(255, 255, 255, 0.15);
+}
+
+/* ✅ Apply Backgrounds Properly */
+body.light-mode {
+    background: var(--bg-gradient-light);
+    color: var(--text-light);
+}
+
+body.dark-mode {
+    background: var(--bg-gradient-dark);
+    color: var(--text-dark);
+}
+
+/* 🎨 Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.glass:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* 🎨 Modern Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* 🌞 Light Mode Inputs */
+body.light-mode input, 
+body.light-mode select {
+    background: var(--input-bg-light);
+    color: var(--text-light);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* 🌙 Dark Mode Inputs */
+body.dark-mode input, 
+body.dark-mode select {
+    background: var(--input-bg-dark);
+    color: var(--text-dark);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 🔘 Modern Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    transform: scale(1.05);
+}
+
+/* Dark Mode Buttons */
+body.dark-mode button {
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+}
+
+body.dark-mode button:hover {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+
+/* ✅ Floating Action Button (FAB) */
+.fab-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fab-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.fab-button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .section {
+        min-width: 280px;
+        height: 200px;
+        font-size: 16px;
+    }
+}
+/* 🌟 Page Styling */
+.page-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.page-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* 🌞 Light Mode */
+.light-mode .page-container {
+    background: rgba(255, 255, 255, 0.9);
+    color: #222;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode .page-container {
+    background: rgba(30, 30, 30, 0.9);
+    color: #fff;
+}
+
+/* ✅ Button Styles */
+button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #fa709a, #fee140);
+}
